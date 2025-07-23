@@ -144,7 +144,7 @@ async function writeAllImagesToFolder(notes) {
 
 module.exports = async function () {
     console.log(">>> Checking for new notes...");
-    if(process.env.NODE_ENV == "development" && !metadata.fetchall) {
+    if(process.env.NODE_ENV == "development" && !metadata.fetchall) { // fetchall değişkeni src/_data/site.json dosyasında manual switch
         const readNotes = await fs.promises.readFile(PUBLISHEDNOTES_CACHE_FILE_PATH);
         const publishedNotes = JSON.parse(readNotes)
         publishedNotes.forEach(async (note) => {
