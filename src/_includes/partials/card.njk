@@ -1,4 +1,5 @@
 {% for note in notes %}
+{% if note.published %}
     <div class="card mb-5">
         <div class="card-body">
             <a href="{{ note.link | safe }}" target="_blank" class="d-block flex-shrink-0" id="cardimage">
@@ -16,4 +17,5 @@
             </div>
         </div>
     </div>
+{% endif %}
 {% endfor %}
