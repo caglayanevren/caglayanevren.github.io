@@ -5,7 +5,7 @@ const compiledpurgecss = () => {
         return purgecss({
             content: ["./_site/*.html", "./_site/**/*.html", "./_site/**/**/*.html"],
             safelist: {
-                standard: ["body", "show", "tiny-slider", "open", "[id*=-ow]", "item-content", "offcanvas-backdrop", "fade", "fa-xmark"],
+                standard: ["body", "show", "tiny-slider", "open", "[id*=-ow]", "item-content", "offcanvas-backdrop", "fade", "fa-xmark", "no-webp", "webp", "index-item-hero"],
                 greedy: [/^tns/, /$-ow/, /$-mw/],
                 deep: [/^tns/, /^item/, /^sayilarla-/, /$-ow/, /$-mw/],
             },
